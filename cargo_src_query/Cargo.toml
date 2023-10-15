@@ -1,0 +1,50 @@
+[package]
+name = "cargo_src_query"
+version = "0.1.0"
+edition = "2021"
+debug = true
+
+[features]
+backtrace = []
+debug = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+bitflags = "1.3.2"
+syn = { version = "1.0.60", features = ["extra-traits", "full", "fold", "parsing"] }
+proc-macro2 = { version = "1.0.24", features = [''] }
+quote = "1"
+cargo_metadata = "0.15.3"
+proc-macro-error = "1.0.4"
+concat-string = "1.0.1"
+anyhow = "1.0.69"
+mockall = "0.11.3"
+mockall_double = "0.3"
+mocktopus = "0.8.0"
+maplit = "1.0.2"
+backtrace = "0.3.67"
+log = "0.4.17"
+env_logger = "0.10.0"
+log-derive = "0.4.1"
+chrono = "0.4.23"
+
+[dev-dependencies.integration_test_crate]
+path = "integration_test_crate"
+
+[dev-dependencies]
+mockall = "0.11.3"
+mockall_double = "0.3"
+pretty_assertions = "1.3.0"
+color-eyre = "0.6.2"
+eyre = "0.6.8"
+proptest = "1.1.0"
+rand = "0.8.5"
+colored-diff = "0.2.3"
+ctor = "0.1.26" # Statup time setup
+uuid = { version = "1.3.0", features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]}
+memuse = "0.2.1"
+test-log = "0.2.11"

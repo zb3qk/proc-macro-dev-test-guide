@@ -1,0 +1,27 @@
+[package]
+name = "macro-core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+colored-diff = "0.2.3"
+anyhow = "1.0"
+
+[build-dependencies]
+syn = { version = "1.0.60", features = ["extra-traits", "full", "fold"] }
+
+[dependencies]
+syn = { version = "1.0.60", features = ["extra-traits", "full", "fold"] }
+quote = "1.0.9"
+proc-macro2 = "1.0.24"
+strum = { version = "0.24", features = ["derive"] }
+ndarray = { version = "0.15.4", optional = true }
+proc-macro-error = "1.0"
+darling = "0.14.2"
+lazy_static = "1.4.0"
+serde = { version = "1.0", features = ["derive"] }
+inventory = "0.3.3"
+rhai = "1.12.0"
+cargo_metadata = "0.15.3"
